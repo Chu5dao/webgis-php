@@ -1,16 +1,16 @@
 <?php 
  include '_loader.php';
  $setTemplate=true;
- if(isset($_GET['halaman'])){
-    $halaman=$_GET['halaman'];
+ if(isset($_GET['page'])){
+    $page=$_GET['page'];
   }
   else{
-    $halaman='beranda';
+    $page='homepage';
   }
   ob_start();
-  $file='_halaman/'.$halaman.'.php';
+  $file='_page/'.$page.'.php';
   if(!file_exists($file)){
-    include '_halaman/error.php';
+    include '_page/error.php';
   }
   else{
     include $file;
@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include '_layouts/head.php'?>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
 <div class="wrapper">
 <?php
   include '_layouts/header.php';
@@ -63,6 +63,6 @@
 
 
 if(isset($fileJs)){
-  include '_halaman/js/'.$fileJs.'.php';
+  include '_page/js/'.$fileJs.'.php';
 }
 ?>

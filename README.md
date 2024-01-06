@@ -1,33 +1,123 @@
 # WEBGIS PHP
-Aplikasi GIS berbasis web standar yang dapat dikembangkan menjadi aplikasi yang lebih bermanfaat kedepannya.
+Một ứng dụng GIS dựa trên web tiêu chuẩn có thể được phát triển thành một ứng dụng hữu ích hơn trong tương lai.
+Dự án này chỉ trong phạm vi nghiên cứu đồ án tốt nghiệp sinh viên vẫn đang được phát triển
 
-# Komponen dalam membangun WEBGIS PHP
-1. Menggunakan Bahasa Pemrograman PHP >5.5
-2. Package yang digunakan menggunakan [Composer](https://getcomposer.org/). package yang digunakan dapat dilihat pada file *composer.json*
-3. Database dari MariaDB (include dari [XAMPP](https://www.apachefriends.org/index.html)) - 
-4. Tampilan Menggunakan [Admin LTE](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.17).
+# Các thành phần trong dự án WEBGIS PHP
+1. Sử dụng ngôn ngữ lập trình PHP >5.5
+2. Package được sử dụng:
+```
+	"joshcam/mysqli-database-class": "dev-master",
+    "josantonius/session": "^1.1",
+    "verot/class.upload.php": "dev-master"
+```
+3. Cơ sở dữ liệu từ MariaDB ([XAMPP](https://www.apachefriends.org/index.html)) 
+4. Temple frontend sử dụng [Admin LTE](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.17).
+5. Mã nguồn, thư viện và những công nghệ khác: ArcMap, Leaflet, Chart.js.
 
-# List Tutorial Youtube
-## Tutorial WebGIS PHP
-1. [Tutorial WEBGIS PHP #PART 1 - Membuat Template Project](https://www.youtube.com/watch?v=WooDHdZ4eOo)
-2. [Tutorial WEBGIS PHP #PART 2 - Membuat Template Coding](https://youtu.be/ikxrjA0b-kg)
-3. [Tutorial WEBGIS PHP #PART 3 - CRUD (Create Read Update Delete) di PHP bagian 1](https://youtu.be/EO5aUakI6Wo)
-4. [Tutorial WEBGIS PHP #PART 4 - CRUD (Create Read Update Delete) di PHP bagian 2](https://youtu.be/4pDDhx-s1v4)
-5. [Tutorial WEBGIS PHP #PART 5 - Form Login (Hak Akses Aplikasi)](https://youtu.be/OFKtjSPD0jA)
-6. [Tutorial WEBGIS PHP #PART 6 - Upload FIle GeoJSON](https://youtu.be/aR9WTHl6gJ8)
-7. [Tutorial WEBGIS PHP #PART 7 - Apply GeoJSON ke Leaflet](https://youtu.be/iTRq9jlDdkg)
-7. [Tutorial WEBGIS PHP #PART 7 - Apply GeoJSON ke Leaflet](https://youtu.be/iTRq9jlDdkg)
+# Các chức năng trong dự án
+## Người dùng
+	- Trang chủ
+    - Bản đồ:
+    	+ Tìm kiếm trên map theo Polygon (đang phát triển)
+    	+ Xem bản đồ 
+    - Đăng nhập
+    - Đăng ký (đang phát triển)
+    - Thống kê
+    - Biểu đồ
+## Admin
+	- Trang chủ
+	- Bản đồ:
+		+ Tìm kiếm trên map theo Polygon (đang phát triển)
+		+ Xem bản đồ
+		+ Thêm, sửa, xóa polygon
+	- Đăng nhập
+    - Quản lý người dùng (đang phát triển)
+    - Thống kê
+    - Biểu đồ
 
-## Tutorial LeafletJs
-1. [Tutorial LeafletJS - Menampilkan Marker (Point) dari Database](https://youtu.be/K3GJ4zeYnwo)
-2. [Tutorial LeafletJS - Kostumisasi Icon Marker (Point) sesuai Database](https://youtu.be/I6lFBH3J_Ts)
+## Thông tin dữ liệu
+### Dữ liệu không gian
+- Hiện trạng sử dụng đất TP.HCM 2010 và 2015.
+Dữ liệu chuẩn hóa đầu ra cuối cùng sử dụng trên dự án GeoJson có dạng:	
 
-# Donate
-Kalian bisa langsung donate ke https://trakteer.id/as.shiddiq
-atau langsung beri tips melalui https://trakteer.id/as.shiddiq/tip
+```
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry":
+			{
+				"type": "Polygon",
+				"coordinates": [
+									[
+										[lat1,lng1],
+										[lat2,lng2],
+										........
+									],
+									[
+										[lat1,lng1],
+										[lat2,lng2],
+										........
+									],
+									..........
+								]
+			},
+			"properties": {
+				"FID": *Object ID*,
+				"Layer": *String*,
+				"Color": *Short*,
+				"MaDat": *String*,
+				"Shape_Area": *float*
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry":
+			{
+				......
+			},
+			.......
+		},
+		......
+	]
+}
+```
+### Dữ liệu phi không gian
+	- CSDL:
 
-Berapapun Donasi Anda, Saya ucapkan Terima kasih banyak :)
+	| Số thứ tự     |		Tên Bảng		|			Ghi chú			|
+	| :-----------:	|:---------------------:|:-------------------------:|
+	| 1      		| Actors				|Bảng tác nhân				|
+	| 2				| Polygon		        |Bảng lưu dữ liệu GeoJson	|
 
-Copyright © 2019 [Nasrullah Siddik](bit.ly/YTNSiddik). All rights reserved.
+	| Tên cột     	|		Kiểu dữ liệu	|	Khóa	|			Ghi chú				|
+	| :-----------:	|:---------------------:|:---------:|:-----------------------------:|
+	| id_login    	| int(11)				|Khóa chính	|Id người dùng					|
+	| name			| Varchar(20)			|			|Tên người dùng					|
+	| pass			| Varchar(150)			|			|Tên người dùng					|
+	| level			| Enum(‘Admin’,’User’) 	|			|Trường phân cấp khi đăng nhập	|
 
+	| Tên cột     		|	Kiểu dữ liệu	|	Khóa	|				Ghi chú				|
+	| :-----------:		|:-----------------:|:---------:|:---------------------------------:|
+	| id_polygon   		| int(11)			|Khóa chính	|Mã người dùng						|
+	| MaDat				| Varchar(30)		|			|Mã đất								|
+	| Geojson_polygon	| Varchar(30)		|			|Trường lưu tên Geojson				|
+	| Color				| Varchar(30) 		|			|Mã màu								|
+	| Year				| Year(4) 			|			|Năm của dữ liệu Đất được cập nhật	|
+
+# Cài đặt và sử dụng
+	- Tùy biến host, server bạn ở file **env.php**
+	- Tài khoản đăng nhập:
+
+	| Tên Tài khoản |		Pass			| Chức năng		|
+	| :-----------:	|:---------------------:|:-------------:|
+	| 	admin      	| 	123465				|	Admin		|
+	| 	user		| 	123456		      	|	Người dùng	|
+
+# Thông tin người phát triển
+Author: Lê Trần Minh Quang
+Gmail: quang3560396@gmail.com
+Gmail: minhqlee1794@gmail.com
+Github: https://github.com/Chu5dao
 

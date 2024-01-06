@@ -1,5 +1,5 @@
 <?php
-defined('env') OR exit('Akses langsung ke Skrip ini diblokir');
+defined('env') OR exit('Truy cập trực tiếp vào Tập lệnh này bị chặn');
 
 $setDb['db_host']='127.0.0.1';
 $setDb['db_name']='webgis-php';

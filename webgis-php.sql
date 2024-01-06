@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2020 at 01:36 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.8
+-- Generation Time: Jan 06, 2024 at 10:34 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,29 +28,114 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `m_kecamatan` (
-  `id_kecamatan` int(11) NOT NULL,
-  `kd_kecamatan` varchar(10) NOT NULL,
-  `nm_kecamatan` varchar(30) NOT NULL,
-  `geojson_kecamatan` varchar(30) NOT NULL,
-  `warna_kecamatan` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_polygon` int(11) NOT NULL,
+  `MaDat` varchar(30) NOT NULL,
+  `geojson_polygon` varchar(30) NOT NULL,
+  `color` varchar(10) NOT NULL,
+  `year` year(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `m_kecamatan`
 --
 
-INSERT INTO `m_kecamatan` (`id_kecamatan`, `kd_kecamatan`, `nm_kecamatan`, `geojson_kecamatan`, `warna_kecamatan`) VALUES
-(6, '63.01.08', 'Tambang Ulang', '28061219081242.geojson', '#009900'),
-(8, '63.01.01', 'Takisung', '25061219081252.geojson', '#007700'),
-(16, '63.01.05', 'Bati-Bati', '71061219081303.geojson', '#880000'),
-(17, '63.01.02', 'Jorong', '34061219081408.geojson', '#000099'),
-(18, '63.01.03', 'Pelaihari', '39061219081421.geojson', '#DD9900'),
-(19, '63.01.04', 'Kurau', '30061219081442.geojson', '#009999'),
-(20, '63.01.07', 'Kintap', '29061219081511.geojson', '#ff0099'),
-(21, '63.01.09', 'Batu Ampar', '44061219081535.geojson', '#990099'),
-(22, '63.01.10', 'Bajuin', '92061219081549.geojson', '#662222'),
-(23, '63.01.11', 'Bumi Makmur', '58061219081604.geojson', '#888'),
-(24, '63.01.06', 'Panyipatan', '100061219081653.geojson', '#222');
+INSERT INTO `m_kecamatan` (`id_polygon`, `MaDat`, `geojson_polygon`, `color`, `year`) VALUES
+(1, 'CCC', 'CCC_2010.json', '#FFAAA0', '2010'),
+(2, 'CLN', 'CLN_2010.json', '#FFD2A0', '2010'),
+(3, 'CQP', 'CQP_2010.json', '#FF6450', '2010'),
+(4, 'DBV', 'DBV_2010.json', '#FFAAA0', '2010'),
+(5, 'DCH', 'DCH_2010.json', '#FFAAA0', '2010'),
+(6, 'DCS', 'DCS_2010.json', '#FFFFFE', '2010'),
+(7, 'DDT', 'DDT_2010.json', '#FFAAA0', '2010'),
+(8, 'DGD', 'DGD_2010.json', '#FFAAA0', '2010'),
+(9, 'DGT', 'DGT_2010.json', '#FFAA32', '2010'),
+(10, 'DKH', 'DKH_2010.json', '#FFAAA0', '2010'),
+(11, 'DNL', 'DNL_2010.json', '#FFAAA0', '2010'),
+(12, 'DRA', 'DRA_2010.json', '#CDAACD', '2010'),
+(13, 'DTL', 'DTL_2010.json', '#AAFFFF', '2010'),
+(14, 'DTS', 'DTS_2010.json', '#FAAAA0', '2010'),
+(15, 'DTT', 'DTT_2010.json', '#FFAAA0', '2010'),
+(16, 'DVH', 'DVH_2010.json', '#FFAAA0', '2010'),
+(17, 'DXH', 'DXH_2010.json', '#FFAAA0', '2010'),
+(18, 'DYT', 'DYT_2010.json', '#FFAAA0', '2010'),
+(19, 'HNK', 'HNK_2010.json', '#FFF0B4', '2010'),
+(20, 'LMU', 'LMU_2010.json', '#000000', '2010'),
+(21, 'LUA', 'LUA_2010.json', '#FFFC82', '2010'),
+(22, 'LUC', 'LUC_2010.json', '#FFFC8C', '2010'),
+(23, 'LUK', 'LUK_2010.json', '#FFFC96', '2010'),
+(24, 'MNC', 'MNC_2010.json', '#B4FFFF', '2010'),
+(25, 'NHK', 'NHK_2010.json', '#FF8CB4', '2010'),
+(26, 'NKH', 'NKH_2010.json', '#F5FFB4', '2010'),
+(27, 'NTD', 'NTD_2010.json', '#D2D2D2', '2010'),
+(28, 'NTS', 'NTS_2010.json', '#AAFFFF', '2010'),
+(29, 'Khong xac dinh', 'null_2010.json', '#FFFFFF', '2010'),
+(30, 'SXN', 'SXN_2010.json', '#FFFC6E', '2010'),
+(31, 'ONT', 'ONT_2010.json', '#FFD0FF', '2010'),
+(32, 'PNK', 'PNK_2010.json', '#FFAAA0', '2010'),
+(33, 'SKC', 'SKC_2010.json', '#FAAAA0', '2010'),
+(34, 'SKK/SKT', 'SKK_SKT_2010.json', '#FAAAA0', '2010'),
+(35, 'SKX', 'SKX_2010.json', '#CDAACD', '2010'),
+(36, 'SON', 'SON_2010.json', '#A0FFFF', '2010'),
+(37, 'TIN', 'TIN_2010.json', '#FFAAA0', '2010'),
+(38, 'TON', 'TON_2010.json', '#FFAAA0', '2010'),
+(39, 'TSC', 'TSC_2010.json', '#FFAAA0', '2010'),
+(51, 'BCS', 'BCS_2015.json', '#FFFFFE', '2015'),
+(58, 'BHK', 'BHK_2015.json', '#fff0b4', '2015'),
+(60, 'CAN', 'CAN_2015.json', '#ff5046', '2015'),
+(68, 'BHK', 'BHK_2010.json', '#fff0b4', '2010'),
+(72, 'CAN', 'CAN_2010.json', '#ff5046', '2010'),
+(73, 'ODT', 'ODT_2010.json', '#FFA0FF', '2010'),
+(74, 'CCC', 'CCC_2015.json', '#FFAAA0', '2015'),
+(75, 'CDG', 'CDG_2015.json', '#FFA0AA', '2015'),
+(76, 'CLN', 'CLN_2015.json', '#FFD2A0', '2015'),
+(79, 'CQP', 'CQP_2015.json', '#FF6450', '2015'),
+(80, 'DBV', 'DBV_2015.json', '#FFAAA0', '2015'),
+(81, 'DCH', 'DCH_2015.json', '#FFAAA0', '2015'),
+(82, 'DCK', 'DCK_2015.json', '#FFAAA0', '2015'),
+(83, 'DDL', 'DDL_2015.json', '#FFAAA0', '2015'),
+(84, 'DDT', 'DDT_2015.json', '#FFAAA0', '2015'),
+(85, 'DGD', 'DGD_2015.json', '#FFAAA0', '2015'),
+(86, 'DGT', 'DGT_2015.json', '#FFAA32', '2015'),
+(87, 'DKH', 'DKH_2015.json', '#FFAAA0', '2015'),
+(88, 'DKV', 'DKV_2015.json', '#FFAAA0', '2015'),
+(89, 'DNG', 'DNG_2015.json', '#FFAAA0', '2015'),
+(90, 'DNL', 'DNL_2015.json', '#FFAAA0', '2015'),
+(91, 'DRA', 'DRA_2015.json', '#CDAACD', '2015'),
+(92, 'DSH', 'DSH_2015.json', '#FFAAA0', '2015'),
+(93, 'DSK', 'DSK_2015.json', '#FFAAA0', '2015'),
+(94, 'DSN', 'DSN_2015.json', '#FFA0AA', '2015'),
+(95, 'DTL', 'DTL_2015.json', '#AAFFFF', '2015'),
+(96, 'DTS', 'DTS_2015.json', '#FAAAA0', '2015'),
+(97, 'DTT', 'DTT_2015.json', '#FFAAA0', '2015'),
+(98, 'DVH', 'DVH_2015.json', '#FFAAA0', '2015'),
+(99, 'DXH', 'DXH_2015.json', '#FFAAA0', '2015'),
+(100, 'DYT', 'DYT_2015.json', '#FFAAA0', '2015'),
+(101, 'HNK', 'HNK_2015.json', '#FFF0B4', '2015'),
+(102, 'LUC', 'LUC_2015.json', '#FFFC8C', '2015'),
+(103, 'LUK', 'LUK_2015.json', '#FFFC96', '2015'),
+(104, 'LUN', 'LUN_2015.json', '#FFFCB4', '2015'),
+(105, 'MNC', 'MNC_2015.json', '#B4FFFF', '2015'),
+(106, 'NCS', 'NCS_2015.json', '#E6E6C8', '2015'),
+(107, 'NHK', 'NHK_2015.json', '#FF8CB4', '2015'),
+(108, 'NKH', 'NKH_2015.json', '#F5FFB4', '2015'),
+(109, 'NTD', 'NTD_2015.json', '#D2D2D2', '2015'),
+(110, 'NTS', 'NTS_2015.json', '#AAFFFF', '2015'),
+(111, 'khong xac dinh', 'null_2015.json', '#FFFFFF', '2015'),
+(112, 'ODT', 'ODT_2015.json', '#FFA0FF', '2015'),
+(113, 'ONT', 'ONT_2015.json', '#FFD0FF', '2015'),
+(114, 'PNK', 'PNK_2015.json', '#FFAAA0', '2015'),
+(115, 'RDD_RDN_RDT_RDM', 'RDD_RDN_RDT_RDM_2015.json', '#6EFF64', '2015'),
+(116, 'RPH_RPN_RPT_RPM', 'RPH_RPN_RPT_RPM_2015.json', '#BEFF1E', '2015'),
+(117, 'RSX_RSN_RST_RSM', 'RSX_RSN_RST_RSM_2015.json', '#B4FFB4', '2015'),
+(118, 'SKC', 'SKC_2015.json', '#FAAAA0', '2015'),
+(119, 'SKK_SKT', 'SKK_SKT_2015.json', '#FAAAA0', '2015'),
+(120, 'SKS', 'SKS_2015.json', '#CDAACD', '2015'),
+(121, 'SKX', 'SKX_2015.json', '#CDAACD', '2015'),
+(122, 'SON', 'SON_2015.json', '#A0FFFF', '2015'),
+(123, 'TIN', 'TIN_2015.json', '#FFAAA0', '2015'),
+(124, 'TMD', 'TMD_2015.json', '#FAAAA0', '2015'),
+(125, 'TON', 'TON_2015.json', '#FFAAA0', '2015'),
+(126, 'TSC', 'TSC_2015.json', '#FFAAA0', '2015');
 
 -- --------------------------------------------------------
 
@@ -60,53 +144,19 @@ INSERT INTO `m_kecamatan` (`id_kecamatan`, `kd_kecamatan`, `nm_kecamatan`, `geoj
 --
 
 CREATE TABLE `pengguna` (
-  `id_pengguna` int(11) NOT NULL,
-  `nm_pengguna` varchar(20) NOT NULL,
-  `kt_sandi` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_login` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `pass` varchar(150) NOT NULL,
+  `level` enum('Admin','User') NOT NULL DEFAULT 'User'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`id_pengguna`, `nm_pengguna`, `kt_sandi`) VALUES
-(1, 'admin', '123456');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `t_hotspot`
---
-
-CREATE TABLE `t_hotspot` (
-  `id_hotspot` int(11) NOT NULL,
-  `id_kecamatan` int(11) NOT NULL,
-  `lokasi` varchar(50) NOT NULL,
-  `keterangan` varchar(100) NOT NULL,
-  `lat` float(9,6) NOT NULL,
-  `lng` float(9,6) NOT NULL,
-  `tanggal` date NOT NULL,
-  `marker` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `t_hotspot`
---
-
-INSERT INTO `t_hotspot` (`id_hotspot`, `id_kecamatan`, `lokasi`, `keterangan`, `lat`, `lng`, `tanggal`, `marker`) VALUES
-(1, 18, 'Jl. Peganggas gas amat', 'Kebakaran Parah sekali', -3.641010, 114.775002, '2019-12-19', '35281219011541.png'),
-(2, 6, 'Jl. Pegangga', 'Kebakaran Parah sekali', -3.656000, 114.775002, '2019-12-19', ''),
-(3, 18, 'Jl. Raya', 'Rusak parah', -3.816298, 114.797401, '2019-12-20', '7281219011755.png'),
-(4, 18, 'Jl A', 'Rusak parah', -3.817160, 114.800987, '2019-12-20', ''),
-(5, 19, 'Jl. Sepeda', '-', -3.641010, 114.675003, '2020-01-20', ''),
-(6, 6, 'Rumah Saiful', '-', -3.661010, 114.775002, '2020-01-20', ''),
-(7, 21, 'Rmah Jakaria', '-', -3.846298, 114.897400, '2020-01-20', ''),
-(8, 22, 'HUtan Rawa Merawa', '-', -3.761010, 114.857399, '2020-01-20', '91200120113957.png'),
-(9, 18, 'Gang Jambu', 'Rumah Terbakar', -3.817130, 114.801888, '2020-02-11', ''),
-(10, 6, 'Rumah Zakaria', 'Kompor Meledak', -3.657300, 114.766006, '2020-02-11', ''),
-(11, 6, 'Gedung Pencakar', 'Lantai 4 terbakar', -3.655300, 114.696503, '2020-02-11', ''),
-(12, 6, 'Pasar Kaki Lima', '4 Loket terbakar', -3.655300, 114.686501, '2020-02-11', ''),
-(13, 6, 'Pasar 5', 'Terbakar habis', -3.685300, 114.776009, '2020-02-11', '');
+INSERT INTO `pengguna` (`id_login`, `name`, `pass`, `level`) VALUES
+(1, 'admin', '$2y$10$oNX.X8jgLhNclHBeI8ytT.1vODlml8.AN1Ieb.rSIChhCa1e7cS0S', 'Admin'),
+(2, 'user', '$2y$10$oNX.X8jgLhNclHBeI8ytT.1vODlml8.AN1Ieb.rSIChhCa1e7cS0S', 'User');
 
 --
 -- Indexes for dumped tables
@@ -116,19 +166,13 @@ INSERT INTO `t_hotspot` (`id_hotspot`, `id_kecamatan`, `lokasi`, `keterangan`, `
 -- Indexes for table `m_kecamatan`
 --
 ALTER TABLE `m_kecamatan`
-  ADD PRIMARY KEY (`id_kecamatan`);
+  ADD PRIMARY KEY (`id_polygon`);
 
 --
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  ADD PRIMARY KEY (`id_pengguna`);
-
---
--- Indexes for table `t_hotspot`
---
-ALTER TABLE `t_hotspot`
-  ADD PRIMARY KEY (`id_hotspot`);
+  ADD PRIMARY KEY (`id_login`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -138,19 +182,13 @@ ALTER TABLE `t_hotspot`
 -- AUTO_INCREMENT for table `m_kecamatan`
 --
 ALTER TABLE `m_kecamatan`
-  MODIFY `id_kecamatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_polygon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `t_hotspot`
---
-ALTER TABLE `t_hotspot`
-  MODIFY `id_hotspot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

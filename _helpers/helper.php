@@ -10,7 +10,7 @@ function assets($a=''){
 }
 
 function url($a='',$b=''){
-    return base_url($b.'?halaman='.$a);
+    return base_url($b.'?page='.$a);
 }
 
 function redirect($a=''){

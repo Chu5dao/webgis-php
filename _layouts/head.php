@@ -34,13 +34,13 @@
   <style type="text/css">
     #mapid { height: 100vh; }
     .icon {
-  display: inline-block;
-  margin: 2px;
-  height: 16px;
-  width: 16px;
-  background-color: #ccc;
-  }
-  .icon-bar {
+      display: inline-block;
+      margin: 2px;
+      height: 16px;
+      width: 16px;
+      background-color: #ccc;
+    }
+    .icon-bar {
     background: url('assets/js/leaflet-panel-layers-master/examples/images/icons/bar.png') center center no-repeat;
 }
 </style>
