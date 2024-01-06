@@ -117,8 +117,8 @@ Dữ liệu chuẩn hóa đầu ra cuối cùng sử dụng trên dự án GeoJs
 	| 	user		| 	123456		      	|	Người dùng	|
 
 # Thông tin người phát triển
--Author: Lê Trần Minh Quang
--Gmail: quang3560396@gmail.com
--Gmail: minhqlee1794@gmail.com
--Github: https://github.com/Chu5dao
+* Author: Lê Trần Minh Quang
+* Gmail: quang3560396@gmail.com
+* Gmail: minhqlee1794@gmail.com
+* Github: https://github.com/Chu5dao
 
