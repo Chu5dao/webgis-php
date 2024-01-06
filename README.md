@@ -7,8 +7,8 @@ Dự án này chỉ trong phạm vi nghiên cứu đồ án tốt nghiệp sinh 
 2. Package được sử dụng:
 ```
 	"joshcam/mysqli-database-class": "dev-master",
-    "josantonius/session": "^1.1",
-    "verot/class.upload.php": "dev-master"
+	"josantonius/session": "^1.1",
+	"verot/class.upload.php": "dev-master"
 ```
 3. Cơ sở dữ liệu từ MariaDB ([XAMPP](https://www.apachefriends.org/index.html)) 
 4. Temple frontend sử dụng [Admin LTE](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.17).
@@ -83,10 +83,11 @@ Dữ liệu chuẩn hóa đầu ra cuối cùng sử dụng trên dự án GeoJs
 	]
 }
 ```
-### Dữ liệu phi không gian
-	- CSDL:
 
-	| Số thứ tự     |		Tên Bảng		|			Ghi chú			|
+### Dữ liệu phi không gian
+- CSDL:
+
+	| Số thứ tự     |	Tên Bảng			|			Ghi chú			|
 	| :-----------:	|:---------------------:|:-------------------------:|
 	| 1      		| Actors				|Bảng tác nhân				|
 	| 2				| Polygon		        |Bảng lưu dữ liệu GeoJson	|
@@ -107,8 +108,8 @@ Dữ liệu chuẩn hóa đầu ra cuối cùng sử dụng trên dự án GeoJs
 	| Year				| Year(4) 			|			|Năm của dữ liệu Đất được cập nhật	|
 
 # Cài đặt và sử dụng
-	- Tùy biến host, server bạn ở file **env.php**
-	- Tài khoản đăng nhập:
+- Tùy biến host, server bạn ở file **env.php**
+- Tài khoản đăng nhập:
 
 	| Tên Tài khoản |		Pass			| Chức năng		|
 	| :-----------:	|:---------------------:|:-------------:|
