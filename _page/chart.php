@@ -8,7 +8,7 @@
   <?php
 
   // Đường dẫn đến thư mục chứa các file JSON
-  $folder_path = 'D:/XAMPP/htdocs/webgis-php/assets/unggah/geojson'; 
+  $folder_path = __DIR__ . '/../assets/unggah/geojson';
   
   // Lấy danh sách các file JSON trong thư mục
   $json_files_2015 = glob($folder_path . '/*_2015.json');

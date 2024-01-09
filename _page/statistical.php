@@ -61,14 +61,17 @@
   // // echo 'Tổng của sự chênh lệch giữa các giá trị "Shape_Area": '. $total_diff;
 
   // ------------------------------------------------------------------------------
-
+  $current_directory = __DIR__;
+//   $folder_path = __DIR__ . '/../assets/unggah/geojson';
   // Đường dẫn đến thư mục chứa các file JSON
-  $folder_path = 'D:/XAMPP/htdocs/webgis-php/assets/unggah/geojson'; 
+  $folder_path = str_replace('\\', '/', $current_directory) . '/../assets/unggah/geojson';
+
   
   // Lấy danh sách các file JSON trong thư mục
   $json_files_2015 = glob($folder_path . '/*_2015.json');
   $json_files_2010 = glob($folder_path . '/*_2010.json');
 
+//   echo $folder_path;
 
   // print_r($json_files);
 

@@ -7,14 +7,14 @@
     $file_name = rand(1,100).date('dmyhis'). $_FILES[$a]['name'];
 
     // Lấy đường dẫn đến thư mục đích
-    $destination = 'D:/XAMPP/htdocs/webgis-php/assets/unggah/geojson/'.$file_name;
+    $destination = __DIR__ .'/../assets/unggah/geojson/'.$file_name;
 
     // Di chuyển file từ thư mục tạm lên thư mục đích
     $result = move_uploaded_file($_FILES[$a]['tmp_name'], $destination);
     if ($result) {
         return $file_name;
     } else {
-        return 'File đã được upload không thành công!';
+        return 'File upload không thành công!';
     }
 }
 

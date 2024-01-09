@@ -108,6 +108,7 @@ Dữ liệu chuẩn hóa đầu ra cuối cùng sử dụng trên dự án GeoJs
 	| Year				| Year(4) 			|			|Năm của dữ liệu Đất được cập nhật	|
 
 # Cài đặt và sử dụng
+- Bạn cần tùy biến lại Apache file **php.ini** *memory_limit* >= 1G để bộ nhớ có thể xử lý các file Json và thống kê
 - Tùy biến host, server bạn ở file **env.php**
 - Tài khoản đăng nhập:
 
